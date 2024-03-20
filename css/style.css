@@ -1,0 +1,55 @@
+* {
+  margin: 0px;
+}
+
+body {
+  font-family: Arial;
+  color: #f6d3b5;
+  background: #3475b3;
+}
+
+.foto {
+  width: 250px;
+  grid-area: foto;
+  
+}
+
+.div-conteiner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "titulo titulo"
+    "foto texto";
+    gap: 20px;
+}
+
+h1{
+    grid-area: titulo;
+  
+}
+
+
+p{
+    grid-area: texto;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+}
+
+img{
+  max-width: 100%;
+}
+
+/* Media Query */
+
+@media (max-width: 600px){
+  .div-conteiner {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "titulo" 
+      "foto" 
+      "texto";
+      gap: 20px;
+
+}
